@@ -5,7 +5,12 @@ var Engine = Matter.Engine,
  
 var particles = [];
 var plinkos = [];
-var divisions =[];
+
+
+
+
+
+
 var divisionHeight=300;
 var score =0;
 function setup() {
@@ -16,7 +21,7 @@ function setup() {
 
 
    for (var k = 0; k <=width; k = k + 80) {
-     divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
+     divisions.push(new divisions(k, height-divisionHeight/2, 10, divisionHeight));
    }
 
 
@@ -64,7 +69,7 @@ function draw() {
      
    }
    if(frameCount%60===0){
-     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
+     particles.push(new particle(random(width/2-30, width/2+30), 10,10));
      score++;
    }
  
